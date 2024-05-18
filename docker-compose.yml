@@ -27,6 +27,12 @@ services:
     volumes:
       - db:/var/lib/mysql
 
+  webapp:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      image: 110975517810.dkr.ecr.eu-central-1.amazonaws.com/frankenphp-wordpress:latest
+
 volumes:
   wordpress:
   db:
