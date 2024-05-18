@@ -36,3 +36,5 @@ jobs:
         service: frankenphp-wordpress
         cluster: wordpress
         wait-for-service-stability: true
+        region: eu-central-1
+
