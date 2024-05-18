@@ -30,6 +30,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ecs-task-def.json
-        service: your-ecs-service
-        cluster: your-ecs-cluster
+        service: frankenphp-wordpress
+        cluster: wordpress
         wait-for-service-stability: true
