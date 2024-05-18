@@ -1,4 +1,4 @@
-FROM dunglas/frankenphp:latest-php8.2
+FROM --platform=linux/amd64 dunglas/frankenphp:latest-php8.2
 
 # install the PHP extensions we need (https://make.wordpress.org/hosting/handbook/handbook/server-environment/#php-extensions)
 RUN install-php-extensions \
@@ -29,6 +29,8 @@ RUN sed -i \
 RUN sed -i \
     -e 's#root \* public/#root \* /var/www/html/#g' \
     /etc/caddy/Caddyfile
+
+EXPOSE 80
 
 USER ${USER}
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
