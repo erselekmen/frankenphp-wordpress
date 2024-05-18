@@ -30,7 +30,7 @@ RUN sed -i \
     -e 's#root \* public/#root \* /var/www/html/#g' \
     /etc/caddy/Caddyfile
 
-EXPOSE 80
+EXPOSE 8080
 
 USER ${USER}
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
